@@ -1,10 +1,16 @@
+import { BrowserRouter, Route, Routes } from "react-router-dom";
 import "./App.css";
+import PinEntry from "./pages/PinEntry";
+import HomePage from "./pages/HomePage";
 
 function App() {
   return (
-    <>
-      <div className="text-red-500 text-xl font-bold">Tailwind is working!</div>
-    </>
+    <BrowserRouter>
+      <Routes>
+        <Route path="/" element={<PinEntry />} />
+        <Route path="/home" element={<HomePage />} />
+      </Routes>
+    </BrowserRouter>
   );
 }
 
